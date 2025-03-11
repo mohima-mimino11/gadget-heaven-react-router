@@ -1,0 +1,182 @@
+[
+  {
+      "product_id": 1,
+      "product_title": "Apple MacBook Air (M2, 2022)",
+      "product_image": "https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+      "category": "Laptop",
+      "price": 1299,
+      "description": "The MacBook Air with the M2 chip delivers incredible performance and battery life in a sleek, lightweight design.",
+      "specifications": [
+          "13.6-inch Retina display",
+          "Apple M2 chip",
+          "8GB RAM",
+          "256GB SSD",
+          "Up to 18 hours of battery life"
+      ],
+      "availability": true,
+      "rating": 4.8,
+      "brand": "Apple"
+  },
+  {
+      "product_id": 2,
+      "product_title": "Samsung Galaxy S23 Ultra",
+      "product_image": "https://m.media-amazon.com/images/I/61VfL-aiToL._AC_SL1500_.jpg",
+      "category": "Phone",
+      "price": 1199,
+      "description": "The Samsung Galaxy S23 Ultra features a powerful camera system, a stunning display, and top-tier performance.",
+      "specifications": [
+          "6.8-inch Dynamic AMOLED display",
+          "Snapdragon 8 Gen 2",
+          "12GB RAM",
+          "256GB storage",
+          "5000mAh battery"
+      ],
+      "availability": true,
+      "rating": 4.7,
+      "brand": "Samsung"
+  },
+  {
+      "product_id": 3,
+      "product_title": "Apple Watch Series 8",
+      "product_image": "https://www.custommacbd.com/cdn/shop/files/watch-8-Starlight-custom-mac-bd.jpg?v=1685339631",
+      "category": "Smart Watch",
+      "price": 399,
+      "description": "The Apple Watch Series 8 offers advanced health features, a sleek design, and seamless integration with iOS.",
+      "specifications": [
+          "45mm or 41mm case size",
+          "Blood oxygen sensor",
+          "ECG app",
+          "Always-On Retina display",
+          "Up to 18 hours of battery life"
+      ],
+      "availability": true,
+      "rating": 4.6,
+      "brand": "Apple"
+  },
+  {
+      "product_id": 4,
+      "product_title": "Dell XPS 13 Plus",
+      "product_image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8IO4Qn4e6-3XMdUXGR94YRni68Nqb6eBxdA&s",
+      "category": "Laptop",
+      "price": 1499,
+      "description": "The Dell XPS 13 Plus is a premium ultrabook with a stunning display, powerful performance, and a sleek design.",
+      "specifications": [
+          "13.4-inch 4K UHD+ display",
+          "Intel Core i7-1260P",
+          "16GB RAM",
+          "512GB SSD",
+          "Up to 12 hours of battery life"
+      ],
+      "availability": true,
+      "rating": 4.5,
+      "brand": "Dell"
+  },
+  {
+      "product_id": 5,
+      "product_title": "Google Pixel 7 Pro",
+      "product_image": "https://adminapi.applegadgetsbd.com/storage/media/large/Pixel-7-Pro-Obsidian-8439.jpg",
+      "category": "Phone",
+      "price": 899,
+      "description": "The Google Pixel 7 Pro offers a premium Android experience with a great camera and smooth performance.",
+      "specifications": [
+          "6.7-inch OLED display",
+          "Google Tensor G2",
+          "12GB RAM",
+          "128GB storage",
+          "5000mAh battery"
+      ],
+      "availability": true,
+      "rating": 4.6,
+      "brand": "Google"
+  },
+  {
+      "product_id": 6,
+      "product_title": "Samsung Galaxy Watch 5",
+      "product_image": "https://dazzle.sgp1.cdn.digitaloceanspaces.com/30801/Samsung-Galaxy-Watch-5-Silver(1).png",
+      "category": "Smart Watch",
+      "price": 279,
+      "description": "The Samsung Galaxy Watch 5 is a feature-packed smartwatch with advanced health tracking and a stylish design.",
+      "specifications": [
+          "40mm or 44mm case size",
+          "Bioelectrical impedance analysis",
+          "Sleep tracking",
+          "Up to 50 hours of battery life",
+          "Android and iOS compatible"
+      ],
+      "availability": true,
+      "rating": 4.4,
+      "brand": "Samsung"
+  },
+  {
+      "product_id": 7,
+      "product_title": "Apple MacBook Pro 16-inch (M2 Pro, 2023)",
+      "product_image": "https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+      "category": "Laptop",
+      "price": 2499,
+      "description": "The MacBook Pro 16-inch with the M2 Pro chip is a powerhouse for professionals, offering unmatched performance.",
+      "specifications": [
+          "16.2-inch Liquid Retina XDR display",
+          "Apple M2 Pro chip",
+          "16GB RAM",
+          "1TB SSD",
+          "Up to 22 hours of battery life"
+      ],
+      "availability": true,
+      "rating": 4.9,
+      "brand": "Apple"
+  },
+  {
+      "product_id": 8,
+      "product_title": "OnePlus 11",
+      "product_image": "https://adminapi.applegadgetsbd.com/storage/media/large/OnePlus-11-(3)-4957.jpg",
+      "category": "Phone",
+      "price": 699,
+      "description": "The OnePlus 11 is a flagship smartphone with a sleek design, fast performance, and a great camera.",
+      "specifications": [
+          "6.7-inch AMOLED display",
+          "Snapdragon 8 Gen 2",
+          "8GB RAM",
+          "128GB storage",
+          "5000mAh battery"
+      ],
+      "availability": true,
+      "rating": 4.5,
+      "brand": "OnePlus"
+  },
+  {
+      "product_id": 9,
+      "product_title": "Fitbit Sense 2",
+      "product_image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTpdfC7Z7y2drP29Qy8KpyuDLlMsSkN4LlOA&s",
+      "category": "Smart Watch",
+      "price": 299,
+      "description": "The Fitbit Sense 2 is a health-focused smartwatch with advanced sensors and a long battery life.",
+      "specifications": [
+          "40mm case size",
+          "Stress management tools",
+          "ECG app",
+          "Up to 6 days of battery life",
+          "Android and iOS compatible"
+      ],
+      "availability": true,
+      "rating": 4.3,
+      "brand": "Fitbit"
+  },
+  {
+      "product_id": 10,
+      "product_title": "HP Spectre x360",
+      "product_image": "https://img-cdn.tnwcdn.com/image?fit=1200%2C675&height=675&url=https%3A%2F%2Fcdn0.tnwcdn.com%2Fwp-content%2Fblogs.dir%2F1%2Ffiles%2F2021%2F08%2FHP-Spectre-x360-14-1-of-7.jpg&signature=be2373b43e1088c3457ffd4f53fd987a",
+      "category": "Laptop",
+      "price": 1399,
+      "description": "The HP Spectre x360 is a versatile 2-in-1 laptop with a stunning design and powerful performance.",
+      "specifications": [
+          "13.5-inch OLED display",
+          "Intel Core i7-1260P",
+          "16GB RAM",
+          "512GB SSD",
+          "Up to 10 hours of battery life"
+      ],
+      "availability": true,
+      "rating": 4.4,
+      "brand": "HP"
+  }
+]

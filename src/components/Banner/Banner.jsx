@@ -13,7 +13,7 @@ const Banner = () => {
           <button className="btn bg-white text-[#9538E2] text-xl font-bold rounded-[32px] py-[15px] px-[30px]">Shop Now</button>
         </div>
         <div className='rounded-3xl'>
-          <img src={bannerImg} alt="" className="h-[563px] border-3 border-solid border-white rounded-3xl" />
+          <img src={bannerImg} alt="" className="h-[563px] border-3 border-solid border-[bg-gradient-to-r from-[#FFFFFF] to-[#FFFFFF00]] rounded-3xl" />
         </div>
       </div>
   </div>
