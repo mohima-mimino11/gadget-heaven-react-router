@@ -7,7 +7,7 @@ const Banner = () => {
       <div className="hero-content flex-col  text-center">
         <div>
           <h1 className="text-[56px] font-bold text-white">Upgrade Your Tech Accessorize with <br /> Gadget Heaven Accessories</h1>
-          <p className="py-6">
+          <p className="py-6 text-white text-base">
           Explore the latest gadgets that will take your experience to the next level. From smart devices to <br /> the coolest accessories, we have it all!
           </p>
           <button className="btn bg-white text-[#9538E2] text-xl font-bold rounded-[32px] py-[15px] px-[30px]">Shop Now</button>
