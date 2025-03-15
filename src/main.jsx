@@ -1,4 +1,4 @@
-import { StrictMode } from 'react'
+import * as React from "react";
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
@@ -8,9 +8,10 @@ import {
 } from "react-router-dom"
 import Home from './components/Home/Home.jsx'
 import ErrorPage from './components/ErrorPage/ErrorPage.jsx'
-import Laptops from './components/Laptops/Laptops.jsx'
-import Phones from './components/Phones/Phones.jsx'
-import SmartWatches from './components/Smart-Watches/SmartWatches.jsx'
+// import Laptops from './components/Laptops/Laptops.jsx'
+// import Phones from './components/Phones/Phones.jsx'
+// import SmartWatches from './components/Smart-Watches/SmartWatches.jsx'
+import ProductDetails from './components/ProductDetails/ProductDetails.jsx'
 
 const router = createBrowserRouter([
   {
@@ -38,6 +39,11 @@ const router = createBrowserRouter([
            
           }
         ]
+      },
+      {
+        path: "/productdetails/:product_id",
+        element: <ProductDetails></ProductDetails>,
+        loader: () => fetch('./products.json')
       }
 
     ]
@@ -45,8 +51,7 @@ const router = createBrowserRouter([
 ]);
 
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
+  <React.StrictMode>
     <RouterProvider router={router} />
-
-  </StrictMode>,
+  </React.StrictMode>
 )
