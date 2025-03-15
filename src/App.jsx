@@ -10,6 +10,7 @@ function App() {
     <>
      <div className='mx-auto'>
       <Navbar></Navbar>
+      {/* outlet so that navbar and footer remains same in every location and the middle content changes according to routing and components */}
       <Outlet></Outlet>
       <Footer></Footer>
      </div>

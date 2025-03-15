@@ -3,23 +3,21 @@ import { useLoaderData, useParams } from "react-router-dom";
 import { IoHeartOutline } from "react-icons/io5";
 
 const ProductDetails = () => {
+  // products data fetched
   const allProducts = useLoaderData();
   // console.log(allProducts);
   const {product_id} = useParams();
   const id = parseInt(product_id)
+  // single product defining for showing the only product detail that was clicked by the user
   const product = allProducts.find(product => product.product_id === id) 
-  console.log(typeof product_id, id);
-  const {product_title,product_image,  price, description, specifications, availability, rating} = product
+  // console.log(typeof product_id, id);
+  const {product_id: currentId,product_title,product_image,  price, description, specifications, availability, rating} = product
   
-  const handleRating = (rate) => {
-    setRatings(rate)
-
-    // other logic
-  }
+  
   
   
   return (
-    <div>
+    <div >
         <div className="hero bg-[#9538E2] h-[463px] rounded-[32px] ">
             <div className="hero-content  flex-col  text-center">
               <div>

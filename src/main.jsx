@@ -16,6 +16,7 @@ import ProductDetails from './components/ProductDetails/ProductDetails.jsx'
 const router = createBrowserRouter([
   {
     path: "/",
+    // root component is app
     element: <App></App>,
     errorElement: <ErrorPage></ErrorPage> ,
     children: [

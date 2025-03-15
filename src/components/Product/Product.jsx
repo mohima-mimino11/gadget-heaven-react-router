@@ -1,5 +1,5 @@
 
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Product = ({product}) => {
   const {product_image, product_title, price, category, product_id} = product;
@@ -18,6 +18,7 @@ const Product = ({product}) => {
           <h2 className="card-title text-2xl font-semibold">{product_title}</h2>
           <p className="text-gray-400 text-xl">Price: {price}$</p>
           <div className="card-actions">
+            {/* Products details shown based on their IDs */}
             <Link to={`/productdetails/${product_id}`}><button className="btn bg-white text-[#9538E2] text-lg font-semibold rounded-[32px] py-[15px] px-[30px]" >View Details</button></Link>
           </div>
         </div>
