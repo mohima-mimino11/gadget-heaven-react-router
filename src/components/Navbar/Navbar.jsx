@@ -5,8 +5,8 @@ import { IoCartOutline , IoHeartOutline } from "react-icons/io5";
 const Navbar = () => {
   const links = <>
     <li><NavLink to="/">Home</NavLink></li>
-    <li><a>Parent</a></li>
-    <li><a>Item 3</a></li>
+    <li><NavLink to="/dashboard">Dashboard</NavLink></li>
+    <li><NavLink to="/statistics">Statistics</NavLink></li>
   </>
 
   return (
