@@ -58,7 +58,7 @@ const ProductDetails = () => {
                 </p>
               
               </div>
-              <div className="card w-[1200px]   card-side bg-base-100 shadow-sm">
+              <div className="card mb-96 lg:mb-0 flex-col  lg:card-side bg-base-100 shadow-sm">
                     <figure className="p-6 rounded-2xl">
                       <img
                         src={product_image}

@@ -89,7 +89,7 @@ const Dashboard = () => {
             <button className="btn bg-[#9538E2] px-5 py-3 rounded-[32px] text-lg  text-white" onClick={handlePurchaseBtn}>Purchase</button>
           </div>
         </div>
-        <div className="flex-col items-center gap-6">
+        <div className="grid grid-cols-1 lg:flex-col items-center gap-6">
           {/* cart products mapped and shown in a different component */}
             {
               cart.map(product => <DashBoardProduct key={product.product_id} product={product}></DashBoardProduct>)
