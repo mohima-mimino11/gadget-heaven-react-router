@@ -37,7 +37,7 @@ const Products = () => {
   
   
   return (
-    <div className="mt-[250px]">
+    <div className="mt-[500px] lg:mt-[250px]">
       <h3 className="text-4xl font-bold text-center">Explore Cutting-Edge <br /> Gadgets</h3>
       <div className="mt-5 flex justify-center items-center gap-6 ">
         <div className="h-[556px] bg-white rounded-2xl  static w-[240px] ">
