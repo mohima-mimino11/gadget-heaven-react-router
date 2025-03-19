@@ -49,6 +49,8 @@ const Dashboard = () => {
     const priceTotalSum = priceTotal.reduce((a, b) => a + b)
     // console.log(priceTotalSum);
     setTotalPrice(priceTotalSum)
+    setCart([]);
+    
   }
   
 

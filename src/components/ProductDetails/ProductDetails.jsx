@@ -1,9 +1,8 @@
-
 import { useLoaderData, useParams } from "react-router-dom";
 import { IoHeartOutline } from "react-icons/io5";
 import { createContext, useState } from "react";
 import { addToCartList, addToWishList } from "../../utility/addToDB";
-
+import { toast } from "react-toastify";
 const ProductDetails = () => {
   // products data fetched
   const allProducts = useLoaderData();
@@ -26,7 +25,7 @@ const ProductDetails = () => {
        * 6. if yes, don't add anything
        */
     addToCartList(id)
-
+    toast(`Product Id number of ${id} added to your Cart.`)
   }
   
   const handleAddToWislist = (id) =>{
@@ -39,6 +38,7 @@ const ProductDetails = () => {
        * 6. if yes, don't add anything
        */
     addToWishList(id)
+    toast(`Product Id number of ${id} added to your Wishlist.`)
   }
   
   

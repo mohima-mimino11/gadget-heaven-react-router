@@ -1,4 +1,4 @@
-
+import { IoIosCloseCircleOutline } from "react-icons/io";
 
 const DashBoardProduct = ({product}) => {
   const {product_title, description, price, product_image } = product;
@@ -13,7 +13,9 @@ const DashBoardProduct = ({product}) => {
           <p className="text-lg text-gray-400">{description}</p>
           <h4 className="text-xl font-semibold">Price: ${price}</h4>
         </div>
-
+        <div className="pl-[500px] text-2xl text-red-500">
+            <IoIosCloseCircleOutline></IoIosCloseCircleOutline>            
+        </div>
       </div>
     </div>
   );
