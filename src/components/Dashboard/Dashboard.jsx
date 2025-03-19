@@ -2,11 +2,11 @@ import {  useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import { getStoredCartList, getStoredWishList } from "../../utility/addToDB";
 import DashBoardProduct from "../DashBoardProduct/DashBoardProduct";
-
+import successIcon from "../../assets/success 1.png"
 
 const Dashboard = () => {
   const allProducts = useLoaderData();
-  console.log(allProducts);
+  // console.log(allProducts);
   const [cart, setCart] = useState([]);
   const [totalPrice, setTotalPrice] = useState(0)
 
@@ -32,7 +32,24 @@ const Dashboard = () => {
     // console.log(wishListProducts);
     setCart(wishListProducts)
   }
-
+  const handleSortByPrice = () =>{
+    const storedCartList = getStoredCartList();
+    const storedCartListInt = storedCartList.map(id => parseInt(id));
+    const cartProducts = allProducts.filter(product => storedCartListInt.includes(product.product_id));
+    const sortedProducts = [...cartProducts].sort((a,b) => b.price - a.price);
+    setCart(sortedProducts)
+    
+  }
+  const handlePurchaseBtn = () =>{
+    document.getElementById('my_modal_1').showModal();
+    const storedCartList = getStoredCartList();
+    const storedCartListInt = storedCartList.map(id => parseInt(id));
+    const cartProducts = allProducts.filter(product => storedCartListInt.includes(product.product_id));
+    const priceTotal = cartProducts.map(product => product.price);
+    const priceTotalSum = priceTotal.reduce((a, b) => a + b)
+    // console.log(priceTotalSum);
+    setTotalPrice(priceTotalSum)
+  }
   
 
   return (
@@ -58,8 +75,10 @@ const Dashboard = () => {
           </div>
           <div className="flex gap-4">
             <h3 className="text-2xl font-bold">Total Cost: {totalPrice} </h3>
-            <button className="btn btn-outline btn-primary px-5 py-3 rounded-[32px] text-lg font-semibold text-[#9538E2] hover:text-white ">Sort By Price</button>
-            <button className="btn bg-[#9538E2] px-5 py-3 rounded-[32px] text-lg  text-white">Purchase</button>
+            <button className="btn btn-outline btn-primary px-5 py-3 rounded-[32px] text-lg font-semibold text-[#9538E2] hover:text-white "
+              onClick={handleSortByPrice}
+            >Sort By Price</button>
+            <button className="btn bg-[#9538E2] px-5 py-3 rounded-[32px] text-lg  text-white" onClick={handlePurchaseBtn}>Purchase</button>
           </div>
         </div>
         <div className="flex-col items-center gap-6">
@@ -67,6 +86,25 @@ const Dashboard = () => {
               cart.map(product => <DashBoardProduct key={product.product_id} product={product}></DashBoardProduct>)
             }
         </div>
+        {/* Open the modal using document.getElementById('ID').showModal() method */}
+        {/* <button className="btn" onClick={()=>document.getElementById('my_modal_1').showModal()}>open modal</button> */}
+        <dialog id="my_modal_1" className="modal">
+          <div className="modal-box ">
+            <div className="flex-col justify-center">
+              <img src={successIcon} alt="" className="w-[72px] h-[72px]" />
+              <h3 className="font-bold text-2xl">Payment Successful!</h3>
+              <p className="text-base text-gray-400">Thanks For Purchasing</p>
+              <p className="text-base text-gray-400">Total:{totalPrice}</p>
+
+              <div className="modal-action">
+                <form method="dialog">
+                  {/* if there is a button in form, it will close the modal */}
+                  <button className="btn">Close</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </dialog>
         
       </div>
     </div>
