@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { useLoaderData } from "react-router-dom";
 import { BarChart, Bar, Rectangle, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
@@ -6,8 +7,11 @@ const Statistics = () => {
   // console.log(Products);
   
   return (
-    <div className="mt-12">
-      <h4 className="text-2xl font-bold px-[840px]">Statistics</h4>
+    <div>
+      <Helmet>
+        <title>Statistics</title>
+      </Helmet>
+      <h4 className="mt-12 text-2xl font-bold px-[840px]">Statistics</h4>
       <div className="mx-[160px] mt-8">
           <div className="h-[447px] bg-white rounded-2xl">
             <ResponsiveContainer width="100%" height="100%">

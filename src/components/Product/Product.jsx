@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 const Product = ({product}) => {
   const {product_image, product_title, price, category, product_id} = product;
   
+  
   return (
     <div>
    

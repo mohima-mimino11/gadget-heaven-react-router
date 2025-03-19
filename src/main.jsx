@@ -12,6 +12,7 @@ import ProductDetails from './components/ProductDetails/ProductDetails.jsx'
 import Dashboard from "./components/Dashboard/Dashboard.jsx";
 import Statistics from "./components/Statistics/Statistics.jsx";
 import { ToastContainer } from 'react-toastify';
+import {HelmetProvider } from 'react-helmet-async';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -62,7 +63,9 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
-    <ToastContainer></ToastContainer>
+    <HelmetProvider>
+      <RouterProvider router={router} />
+      <ToastContainer></ToastContainer>
+    </HelmetProvider>
   </React.StrictMode>
 )

@@ -3,6 +3,7 @@ import { useLoaderData } from "react-router-dom";
 import { getStoredCartList, getStoredWishList } from "../../utility/addToDB";
 import DashBoardProduct from "../DashBoardProduct/DashBoardProduct";
 import successIcon from "../../assets/success 1.png"
+import { Helmet } from "react-helmet-async";
 
 const Dashboard = () => {
   const allProducts = useLoaderData();
@@ -10,7 +11,7 @@ const Dashboard = () => {
   const [cart, setCart] = useState([]);
   const [totalPrice, setTotalPrice] = useState(0)
 
- 
+  // Cart Product showing onclick
   const handleCartProducts = () =>{
     const storedCartList = getStoredCartList();
     const storedCartListInt = storedCartList.map(id => parseInt(id));
@@ -24,7 +25,7 @@ const Dashboard = () => {
     
     
   }
-
+  // Wishlist product showing on click
   const handleWishlistProducts = () => {
     const storedWishList = getStoredWishList();
     const storedWishListInt = storedWishList.map(id => parseInt(id));
@@ -32,6 +33,7 @@ const Dashboard = () => {
     // console.log(wishListProducts);
     setCart(wishListProducts)
   }
+  // Cart Product sorted By price on click
   const handleSortByPrice = () =>{
     const storedCartList = getStoredCartList();
     const storedCartListInt = storedCartList.map(id => parseInt(id));
@@ -40,6 +42,7 @@ const Dashboard = () => {
     setCart(sortedProducts)
     
   }
+  // Purchase button modal showing function
   const handlePurchaseBtn = () =>{
     document.getElementById('my_modal_1').showModal();
     const storedCartList = getStoredCartList();
@@ -56,6 +59,9 @@ const Dashboard = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>Dashboard</title>
+      </Helmet>
       <div className="hero bg-[#9538E2] h-[344px] rounded-[32px] ">
             <div className="hero-content  flex-col  text-center">
               <div>
@@ -84,12 +90,13 @@ const Dashboard = () => {
           </div>
         </div>
         <div className="flex-col items-center gap-6">
+          {/* cart products mapped and shown in a different component */}
             {
               cart.map(product => <DashBoardProduct key={product.product_id} product={product}></DashBoardProduct>)
             }
         </div>
         {/* Open the modal using document.getElementById('ID').showModal() method */}
-        {/* <button className="btn" onClick={()=>document.getElementById('my_modal_1').showModal()}>open modal</button> */}
+        
         <dialog id="my_modal_1" className="modal">
           <div className="modal-box ">
             <div className="flex-col justify-center">

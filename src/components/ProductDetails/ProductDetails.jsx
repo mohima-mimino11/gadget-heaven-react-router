@@ -3,6 +3,7 @@ import { IoHeartOutline } from "react-icons/io5";
 import { createContext, useState } from "react";
 import { addToCartList, addToWishList } from "../../utility/addToDB";
 import { toast } from "react-toastify";
+import { Helmet } from "react-helmet-async";
 const ProductDetails = () => {
   // products data fetched
   const allProducts = useLoaderData();
@@ -45,6 +46,9 @@ const ProductDetails = () => {
   
   return (
     <div >
+      <Helmet>
+        <title>Product Details</title>
+      </Helmet>
         <div className="hero bg-[#9538E2] h-[463px] rounded-[32px] ">
             <div className="hero-content  flex-col  text-center">
               <div>
@@ -104,8 +108,3 @@ const ProductDetails = () => {
 
 export default ProductDetails;
 
-/**
- * 1. Create a context and export it
- * 2.Add Provider for the context with a value, value can be anything
- * 3.useContext() hook to access value in the context API
- */
